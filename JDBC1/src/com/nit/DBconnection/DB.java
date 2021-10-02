@@ -3,7 +3,7 @@ package com.nit.DBconnection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DBDAO {
+public class DB {
 private static  Connection con = null;
 private static String url,name,pass;
 public static Connection getDbCon() throws Exception

@@ -3,13 +3,13 @@ package com.nit.jdbcapp4;
 import java.sql.Connection;
 import java.sql.Statement;
 
-import com.nit.DBconnection.DBDAO;
+import com.nit.DBconnection.DB;
 
 public class DBCreate {
 
 	public static void getTableCreate() throws Exception{
 		
-			Connection con = DBDAO.getDbCon();
+			Connection con = DB.getDbCon();
 			Statement smt  = con.createStatement();
 			boolean val = smt.execute("create table employee (eid number(5),ename varchar2(20),esal number(7,2))");
 			if(!val)

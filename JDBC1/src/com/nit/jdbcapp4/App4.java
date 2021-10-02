@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
-import com.nit.DBconnection.DBDAO;
+import com.nit.DBconnection.DB;
 
 public class App4 {
 
@@ -15,7 +15,7 @@ public class App4 {
 	try
 	{
 		// get Connection
-		Connection con = DBDAO.getDbCon();
+		Connection con = DB.getDbCon();
 		DatabaseMetaData dmt = con.getMetaData();
 		ResultSet tab = dmt.getTables(null, null, "employee",null);
 	
