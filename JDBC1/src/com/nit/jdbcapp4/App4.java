@@ -29,6 +29,10 @@ public class App4 {
 		}
 		else
 		{
+			System.out.println("Do you want to Store Data");
+			String ch = s.nextLine();
+			if(ch.equalsIgnoreCase("Yes"))
+			{
 			System.out.println("Enter Employee Id : ");
 			int id = Integer.parseInt(s.nextLine());
 			System.out.println("Enter Employee name : ");
@@ -50,6 +54,9 @@ public class App4 {
 			{
 				System.out.println("Record is not Store");
 			}
+			}
+			else
+			{
 			System.out.println("Do u want to see that Record yes/No : ");
 			String ans = s.nextLine();
 			if(ans.equalsIgnoreCase("yes"))
@@ -57,8 +64,8 @@ public class App4 {
 				System.out.println("Enter Employee Id : ");
 			int eid = Integer.parseInt(s.nextLine());
 			PreparedStatement ps1 = con.prepareStatement("select * from employee where eid = ?");
-			ps.setInt(1, eid);
-		    ResultSet rs = ps.executeQuery();
+			ps1.setInt(1, eid);
+		    ResultSet rs = ps1.executeQuery();
 		   if(rs.next());
 		   {
 			   System.out.println("Employee id : "+"\t"+"Employee Name : "+"\t"+"Employee Salary : ");
@@ -74,6 +81,7 @@ public class App4 {
 
 	
 con.close();
+		}
 	}
 	catch(Exception e)
 	{
