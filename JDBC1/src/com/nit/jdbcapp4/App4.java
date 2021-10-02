@@ -72,8 +72,8 @@ public class App4 {
 		}
 			
 
-		
-
+	
+con.close();
 	}
 	catch(Exception e)
 	{
